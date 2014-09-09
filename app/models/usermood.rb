@@ -1,20 +1,26 @@
-class UserMood < ActiveRecord::Base
+class Usermood < ActiveRecord::Base
 
 	belongs_to :user
 
 	def self.find_ratings
 		
-		return "hello"
-		# mood_rating_sum = 0
+		mood_rating_sum = 0
 
-		# Mood.all.each do |mood|
-		# 	mood.rating
-		# 	mood_rating_sum += mood.rating
-		# end
+		Usermood.all.each do |mood|
+			mood.rating
+			mood_rating_sum += mood.rating
+		end
 
-		# mood_count = Mood.count
-		# mood_rating_average = mood_rating_sum / mood_count 
-	
+		mood_count = Usermood.count
+
+		if mood_count == 0
+			mood_rating_average = 0
+		else
+			mood_rating_average = mood_rating_sum / mood_count 
+		end
+
+		return mood_rating_average
+
 	end
 
 end

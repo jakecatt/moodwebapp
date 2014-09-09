@@ -1,0 +1,15 @@
+<h1>Edit mood</h1>
+
+<%= form_for(@mood) do |f| %>
+	<div class="field">
+		<%= f.label :rating %><br>
+		<%= f.text_field :rating %>
+	</div>
+	<div class="field">
+		<%= f.label :message %><br>
+		<%= f.text_field :message %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>
