@@ -2,6 +2,14 @@ class UsermoodsController < ApplicationController
 
 before_action :authenticate_user!
 
+before_filter :require_permission, only: [:show, :edit, :update]
+
+	def require_permission
+		if current_user != Usermood.find( params[:id] ).user
+			redirect_to new_user_session_path
+		end
+	end
+
 	def index
 		if current_user.usermoods.empty?
 			redirect_to new_usermood_path
@@ -9,10 +17,10 @@ before_action :authenticate_user!
 		@all_moods_average = Usermood.find_ratings
 		@mood = current_user.usermoods.last.rating
 	end
-	end
 
 	def show
-		@mood = Usermood.find( params[:id] )
+			@mood = Usermood.find( params[:id] )
+		end
 	end
 
 	def edit
