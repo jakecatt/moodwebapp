@@ -2,14 +2,6 @@ class UsermoodsController < ApplicationController
 
 before_action :authenticate_user!
 
-# before_filter :require_permission, only: [:show, :edit, :update]
-
-	# def require_permission
-	# 	if current_user != Usermood.find( params[:id] ).user
-	# 		redirect_to new_user_session_path
-	# 	end
-	# end
-
 	def index
 		if current_user.usermoods.empty?
 			redirect_to new_usermood_path

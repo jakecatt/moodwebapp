@@ -7,7 +7,7 @@ class Usermood < ActiveRecord::Base
 		mood_rating_sum = 0
 
 		Usermood.all.each do |mood|
-			mood.rating
+			mood.rating ||= 0
 			mood_rating_sum += mood.rating
 		end
 

@@ -4,7 +4,6 @@ class CreateUsermoods < ActiveRecord::Migration
     	t.integer :rating
     	t.text :message
     	t.references :user
-    	t.datetime :created_at
     	t.timestamps
     end
   end
