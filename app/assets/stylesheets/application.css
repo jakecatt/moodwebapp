@@ -1,3 +1,38 @@
+/* 
+ * //= require form
+ * //= require site
+ * //= require launch
+*/
+
+
+p {
+	font-size: 12px;
+}
+
+body {
+	background-image: radial-gradient(circle, #ffa500, #ff7e00);
+}
+
+h2 {
+	font-family: Helvetica, sans-serif;
+	font-weight: lighter;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 170px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

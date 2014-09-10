@@ -1,0 +1,41 @@
+label {
+	font-family: Helvetica, sans-serif;
+	font-weight: lighter;
+	text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10em;
+  margin: 0 1em 0 0;
+  font-size: 12px;
+}
+
+form input[type="email"],
+form input[type="password"] {
+	
+	padding: 0.5em 0.6em;
+  display: inline-block;
+  *display: inline;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+	display: inline-block;
+}
+
+input[type="submit"] {
+	outline: thin dotted #333;
+  outline: 1px auto #129FEA;
+}
+
+a {
+	text-decoration: none;
+	font-family: Helvetica, sans-serif;
+	color: black;
+	font-size: 12px; 
+}

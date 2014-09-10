@@ -1,15 +1,24 @@
-<h1>Edit mood</h1>
+<header>
+	<div class="logout">
+		<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+	</div>
+	<div class="home">
+		<%= link_to image_tag("http://i.imgur.com/I7O3Zsu.png"), usermoods_path %>
+	</div>
+</header>
 
 <%= form_for(@mood) do |f| %>
 	<div class="field">
-		<%= f.label :rating %><br>
 		<%= f.range_field :rating, in: 1..100 %>
 	</div>
-	<div class="field">
-		<%= f.label :message %><br>
-		<%= f.text_field :message %>
-	</div>
-	<div class="actions">
-		<%= f.submit %>
-	</div>
+		
+	<br>
+		
+	<%= f.text_field :message, :placeholder => "Why?" %>
+	
+	<br>
+	<br>
+
+	<%= f.submit "Submit", :type => :image, :src => image_path("http://i.imgur.com/rY87M5n.png") %> 
+
 <% end %>

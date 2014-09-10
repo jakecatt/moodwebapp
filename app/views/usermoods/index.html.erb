@@ -1,6 +1,15 @@
-<h1>Comparison</h1>
+<header>
+	<div class="logout">
+		<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+	</div>
+	<div class="home">
+		<%= link_to image_tag("http://i.imgur.com/I7O3Zsu.png"), usermoods_path %>
+	</div>
+</header>
 
-<h3><%= @mood %></h3>
-<h3><%= @all_moods_average %></h3>
+<div class="mood-info">
+	<h3>Current Mood: <%= @mood %> | Average: <%= @all_moods_average %></h3>
+</div>
 
-<h4><%= link_to 'edit mood', edit_usermood_path(current_user) %></h4>
+<div class="edit"><%= link_to image_tag("http://i.imgur.com/HcTTXfB.png"), edit_usermood_path(current_user) %>
+</div>

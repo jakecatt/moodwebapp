@@ -1,0 +1,47 @@
+.container {
+  text-align: center;
+  margin: 0px auto;
+  width: auto;
+  height: auto;
+}
+
+.logo {
+  padding-top: 100px;
+}
+
+.logo img {
+width: 410px;
+height: 300px;
+}
+
+.signup button {
+  background: white;
+  padding: 15px 24px;
+  border-radius: 8px;
+  }
+
+.signup button:hover {
+  background: #e2e2e2;
+  color: black;
+  }
+
+.signup a {
+  color: black;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.login a {
+  color: black;
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
+  text-decoration: none
+}
+
+footer {
+  padding-top: 15%;
+  padding-bottom: 2%;
+  text-align: center;
+}

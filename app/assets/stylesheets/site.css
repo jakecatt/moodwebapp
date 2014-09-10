@@ -1,0 +1,54 @@
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: Helvetica;
+}
+
+header {
+  overflow: hidden;
+  background-color: transparent;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+header .logout a {
+  
+  font-size: 14px;
+  float: right;
+  height: 50;
+  width: 90;
+  padding-right: 20px;
+  padding-top: 22px;
+  padding-bottom: 5px;
+
+}
+
+header .home img {
+  
+  width: 50px;
+  height: 50px;
+  float: left;
+  height: 50;
+  width: 90;
+  padding-left: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.mood-info {
+	margin-top: 230px;
+}
+
+.container img {
+	width: 50px;
+	height: 20px;
+}
+
+input[type="image"]
+{
+  width: 50px;
+  height: 20px;
+}
