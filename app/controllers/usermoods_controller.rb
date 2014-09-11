@@ -1,18 +1,17 @@
 class UsermoodsController < ApplicationController
 
-before_action :authenticate_user!
 
 	def index
 		if current_user.usermoods.empty?
 			redirect_to new_usermood_path
 		else
-		@all_moods_average = Usermood.find_ratings
-		@mood = current_user.usermoods.first.rating
+			@all_moods_average = Usermood.find_ratings
+			@mood = current_user.usermoods.first.rating
+		end
 	end
 
 	def show
-			@mood = Usermood.find( current_user.id )
-		end
+		@mood = Usermood.find( current_user.id )
 	end
 
 	def edit

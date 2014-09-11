@@ -1,4 +1,7 @@
 <head>
+<link rel="stylesheet" type="text/css" href="assets/stylesheets/stylesheet.css">
+<html>
+
 	<title>How do we feel?</title>
 	<h3>Let's find out.</h3>
 </head>
@@ -11,7 +14,7 @@
   </div>
 
   <div class="signup">
-    <button><a href="/signup">Sign Up</a></button>
+    <button><%= link_to 'Logout', destroy_user_session_path, method: :delete %></button>
   </div>
   <br>
   <div class="login">
@@ -21,7 +24,7 @@
 </div>
 
 <footer>
-<small>© MoodKiwi, Inc.  2014</small>
+<small>Copyright MoodKiwi, Inc.  2014</small>
 </footer>
 
 </body>

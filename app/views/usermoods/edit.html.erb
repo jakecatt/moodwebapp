@@ -8,13 +8,18 @@
 </header>
 
 <%= form_for(@mood) do |f| %>
+	
+	<h3>Rate your mood:</h3>
+
 	<div class="field">
 		<%= f.range_field :rating, in: 1..100 %>
 	</div>
 		
 	<br>
 		
-	<%= f.text_field :message, :placeholder => "Why?" %>
+	<h3>And a message:</h3>
+
+	<%= f.text_field :message, :placeholder => "" %>
 	
 	<br>
 	<br>

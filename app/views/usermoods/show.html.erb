@@ -3,9 +3,12 @@
 		<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
 	</div>
 	<div class="home">
-		<%= link_to image_tag("http://zesprikiwi.com/wp-content/uploads/2011/06/zespri11.jpg"), usermoods_path %>
+		<%= link_to image_tag("http://i.imgur.com/I7O3Zsu.png"), usermoods_path %>
 	</div>
 </header>
-<h1>Current Mood</h1>
-<%= @mood.rating %><br>
-<%= @mood.message %><br>
+<h1>Current Mood: <%= @mood.rating %> </h1>
+<br>
+<h3>Why: <%= @mood.message %></h3>
+
+<div class="compare"><%= link_to image_tag("http://i.imgur.com/rY87M5n.png"), usermoods_path %>
+</div>

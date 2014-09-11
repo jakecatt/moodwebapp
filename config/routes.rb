@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
   
   devise_for :users
-  root 'usermoods#index'
 
   resources :usermoods
+
+  devise_scope :user do
+    
+    unauthenticated :user do
+      root to: redirect('/launch.html'), as: :unauth_root
+    end
+    
+    authenticated :user do
+      root 'usermoods#index', as: :auth_root
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

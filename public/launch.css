@@ -1,0 +1,57 @@
+html, body {
+  height: 100%;
+  font-family: Helvetica;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background-image: radial-gradient(circle, #ffa500, #ff7e00);
+}
+
+.container {
+  text-align: center;
+  margin: 0px auto;
+  width: auto;
+  height: auto;
+}
+
+.logo {
+  padding-top: 90px;
+}
+
+.logo img {
+width: 385;
+height: 360;
+padding-bottom: 40px;
+}
+
+.signup button {
+  background: white;
+  padding: 15px 24px;
+  border-radius: 8px;
+  }
+
+.signup button:hover {
+  background: #e2e2e2;
+  color: black;
+  }
+
+.signup a {
+  color: black;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.login a {
+  color: black;
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
+  text-decoration: none
+}
+
+footer {
+  padding-top: 13%;
+  padding-bottom: 2%;
+  text-align: center;
+}
