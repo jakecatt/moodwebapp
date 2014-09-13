@@ -1,14 +1,32 @@
 <header>
-	<div class="logout">
-		<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-	</div>
-	<div class="home">
-		<%= link_to image_tag("http://i.imgur.com/I7O3Zsu.png"), usermoods_path %>
-	</div>
-</header>
-<h1>Current Mood: <%= @mood.rating %> </h1>
-<br>
-<h3>Why: <%= @mood.message %></h3>
 
-<div class="compare"><%= link_to image_tag("http://i.imgur.com/rY87M5n.png"), usermoods_path %>
+	<%= link_to image_tag("http://i.imgur.com/I7O3Zsu.png"), usermoods_path %>
+
+	<div class="user-nav">
+	
+		<div class="logout">
+			<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+		</div>
+
+		<div class="settings">
+			<%= link_to 'Settings', edit_user_registration_path %>
+		</div>
+
+</header>
+
+<div class="content">
+
+	<h4><em>(there will be info from the day of the selected rating here)</em></h4>
+
+	<div class="mood-info">
+		<h1>Current Mood: <%= @mood.rating %> </h1>
+	</div>
+
+	<h3><em><%= @mood.message %></em></h3>
+
+</div>
+
+<div class="nav-bar">
+<%= link_to image_tag("http://i.imgur.com/rY87M5n.png"), usermoods_path %>
+<%= link_to image_tag("http://i.imgur.com/HcTTXfB.png"), edit_usermood_path(current_user) %>
 </div>

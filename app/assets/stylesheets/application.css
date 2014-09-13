@@ -11,6 +11,7 @@ p {
 
 body {
 	background-image: radial-gradient(circle, #ffa500, #ff7e00);
+	background-size: 100%;
 }
 
 h2 {
@@ -21,7 +22,7 @@ h2 {
 .container {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 170px;
+	margin-top: 130px;
 	text-align: center;
 }
 

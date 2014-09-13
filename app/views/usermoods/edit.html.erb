@@ -1,29 +1,42 @@
 <header>
-	<div class="logout">
-		<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-	</div>
-	<div class="home">
-		<%= link_to image_tag("http://i.imgur.com/I7O3Zsu.png"), usermoods_path %>
-	</div>
+
+	<%= link_to image_tag("http://i.imgur.com/I7O3Zsu.png"), usermoods_path %>
+
+	<div class="user-nav">
+	
+		<div class="logout">
+			<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+		</div>
+
+		<div class="settings">
+			<%= link_to 'Settings', edit_user_registration_path %>
+		</div>
+
 </header>
 
+<div class="rating-box">
 <%= form_for(@mood) do |f| %>
 	
-	<h3>Rate your mood:</h3>
+	<h3>How are you feeling today?</h3>
+
+	<br>
 
 	<div class="field">
 		<%= f.range_field :rating, in: 1..100 %>
 	</div>
 		
 	<br>
-		
-	<h3>And a message:</h3>
+	<br>
+	<br>
 
-	<%= f.text_field :message, :placeholder => "" %>
+	<%= f.text_field :message, :placeholder => "Message" %>
 	
 	<br>
 	<br>
+	<br>
 
-	<%= f.submit "Submit", :type => :image, :src => image_path("http://i.imgur.com/rY87M5n.png") %> 
+	<%= f.submit "Submit", :type => :image, :src => image_path("http://i.imgur.com/dA7TqMV.png") %> 
 
 <% end %>
+</div>
+
